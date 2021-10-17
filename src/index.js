@@ -3,9 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import reducer,{initialState} from './Reducer.js'
+import {StateProvider} from './StateProvider.js'
 
 ReactDOM.render(
   <React.StrictMode>
+
+  <StateProvider initialState={initialState} reducer={reducer}></StateProvider>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
